@@ -1,0 +1,13 @@
+reference website: https://www.tripadvisor.com/
+icon website: https://icon-sets.iconify.design/solar/ (pick icon that fill)
+picture website: https://unsplash.com/
+illustration website: https://undraw.co/illustrations
+color palette website: https://yeun.github.io/open-color/
+
+
+font family: Oswald (heading), Inter (body)
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+font scale: major third

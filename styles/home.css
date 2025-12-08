@@ -1,0 +1,65 @@
+:root {
+    /* typography */
+    --ff-heading: "Oswald", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --text-6: 3.815rem;
+    --text-5: 3.052rem;
+    --text-4: 2.441rem;
+    --text-3: 1.953rem;
+    --text-2: 1.563rem;
+    --text-1: 1.25rem;
+    --text-0: 0.8rem;
+
+    /* color palette */
+    --blue-0: #e7f5ff;
+    --blue-1: #d0ebff;
+    --blue-3: #74c0fc;
+    --blue-5: #339af0;
+    --blue-7: #1c7ed6;
+    --blue-9: #1864ab;
+
+    --gray-0: #f8f9fa;
+    --gray-1: #f1f3f5;
+    --gray-3: #dee2e6;
+    --gray-5: #adb5bd;
+    --gray-7: #495057;
+    --gray-9: #212529;
+
+    --white: #fff;
+    --black: #000;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-heading);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1200px;
+}
