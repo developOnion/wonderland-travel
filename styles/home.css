@@ -251,6 +251,7 @@ button {
 
     .footer {
         flex-direction: column-reverse;
+        gap: 1rem;
     }
 
     .footer__section-title {
