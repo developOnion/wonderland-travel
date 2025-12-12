@@ -242,6 +242,10 @@ button {
         background-color: var(--gray-1);
     }
 
+    .nav--open {
+        display: block;
+    }
+
     .nav__close-btn {
         display: block;
     }

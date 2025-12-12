@@ -1,16 +1,18 @@
 const nav = document.querySelector(".nav");
 const hamburgerMenu = document.querySelector(".header__hamburger-menu");
 const closeBtnNav = document.querySelector(".nav__close-btn");
+const largeScreen = window.matchMedia("(width > 1024px)");
 
 export function initNavbar() {
-    hamburgerMenu.addEventListener("click", showSideNav);
-    closeBtnNav.addEventListener("click", hideSideNav);
+    hamburgerMenu.addEventListener("click", toggleSideNav);
+    closeBtnNav.addEventListener("click", toggleSideNav);
+    largeScreen.addEventListener("change", handleViewportChange);
 }
 
-function showSideNav() {
-    nav.style.display = "block";
+function handleViewportChange(event) {
+    if (event.matches) nav.classList.remove("nav--open");
 }
 
-function hideSideNav() {
-    nav.style.display = "none";
+function toggleSideNav() {
+    nav.classList.toggle("nav--open");
 }
