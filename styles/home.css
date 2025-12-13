@@ -38,7 +38,6 @@
 }
 
 .hero-section {
-    padding-inline: 1rem;
     display: flex;
     justify-content: center;
 }
@@ -46,7 +45,7 @@
 .hero {
     width: 100%;
     height: 800px;
-    background-image: url("../assets/images/beach-1-compress.jpg");
+    background-image: url("../assets/images/beach-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,19 +92,9 @@
     gap: 0.5rem;
 }
 
-.overlay {
-    position: relative;
-}
-
-.overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 100, 0.4),
-        rgba(0, 0, 100, 0.2)
-    );
-    z-index: 10;
+.thing-to-do-section,
+.best-accommodation-section,
+.place-to-go-section {
+    display: flex;
+    justify-content: center;
 }
