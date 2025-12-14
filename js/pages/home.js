@@ -4,4 +4,4 @@ function initHomePage() {
     initNavbar();
 }
 
-initHomePage();
+document.addEventListener("DOMContentLoaded", initHomePage);

@@ -72,6 +72,10 @@
 .hero__title {
     font-size: var(--text-7);
 
+    @media (width < 1024px) {
+        font-size: var(--text-6);
+    }
+
     @media (width < 640px) {
         font-size: var(--text-5);
     }

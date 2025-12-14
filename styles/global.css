@@ -84,6 +84,11 @@ button {
     padding-inline: 1rem;
 }
 
+.wrapper--wide {
+    max-width: 1360px;
+    padding-inline: 0;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -284,6 +289,11 @@ button {
 
 .card-section__title {
     margin-bottom: 0.5rem;
+    font-size: var(--text-3);
+
+    @media (width < 640px) {
+        font-size: var(--text-2);
+    }
 }
 
 .card-list {
@@ -324,11 +334,19 @@ button {
     inset: 0;
     border-radius: inherit;
     background: linear-gradient(
-        to right,
+        to top,
         rgba(0, 0, 100, 0.4),
         rgba(0, 0, 100, 0.2)
     );
     z-index: 10;
+}
+
+.overlay-blue--to-right::after {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 100, 0.4),
+        rgba(0, 0, 100, 0.2)
+    );
 }
 
 .overlay-gray {
