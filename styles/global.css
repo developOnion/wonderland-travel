@@ -416,17 +416,36 @@ button {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
-.card2--fill {
+.card2__content {
+    gap: 0.5rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 1rem;
+}
+
+.card2__price {
+    font-size: var(--text-0);
+}
+
+.card2__price-num {
+    font-size: var(--text-1);
+    font-weight: bold;
+    color: var(--blue-9);
+}
+
+.card2--highlight {
     border: 1px solid var(--gray-5);
     border-radius: var(--border-1);
 }
 
-.card2--fill .card2__img {
+.card2--highlight .card2__img {
     border-radius: 0;
     aspect-ratio: 1 / 0.8;
+}
+
+.card2--highlight .card2__content {
+    padding-inline: 1rem;
 }
 
 .card2__img {
@@ -554,6 +573,10 @@ button {
     path {
         fill: var(--blue-0);
     }
+}
+
+.bg-gray-0 {
+    background-color: var(--gray-0);
 }
 
 @media (width < 1024px) {
