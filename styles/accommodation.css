@@ -39,7 +39,8 @@
 
 .hero-section,
 .top-accommodation-section,
-.top-hotel-section {
+.top-hotel-section,
+.top-resort-section {
     display: flex;
     justify-content: center;
 }
