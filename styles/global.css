@@ -146,6 +146,12 @@ button {
     font-size: var(--text-1);
 }
 
+.nav__link--active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .nav__item:hover {
     background-color: var(--blue-0);
 }
@@ -405,11 +411,22 @@ button {
     color: var(--white);
 }
 
-.card2 {
+.card2,
+.card2__content {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.card2--fill {
+    border: 1px solid var(--gray-5);
+    border-radius: var(--border-1);
+}
+
+.card2--fill .card2__img {
+    border-radius: 0;
+    aspect-ratio: 1 / 0.8;
 }
 
 .card2__img {
@@ -429,7 +446,7 @@ button {
     font-size: var(--text-0);
 }
 
-.card2__description-container {
+.card2__rating-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
