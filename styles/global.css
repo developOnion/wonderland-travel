@@ -146,6 +146,12 @@ button {
     font-size: var(--text-1);
 }
 
+.nav__link--active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .nav__item:hover {
     background-color: var(--blue-0);
 }
@@ -405,11 +411,41 @@ button {
     color: var(--white);
 }
 
-.card2 {
+.card2,
+.card2__content {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.card2__content {
     gap: 0.5rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 1rem;
+}
+
+.card2__price {
+    font-size: var(--text-0);
+}
+
+.card2__price-num {
+    font-size: var(--text-1);
+    font-weight: bold;
+    color: var(--blue-9);
+}
+
+.card2--highlight {
+    border: 1px solid var(--gray-5);
+    border-radius: var(--border-1);
+}
+
+.card2--highlight .card2__img {
+    border-radius: 0;
+    aspect-ratio: 1 / 0.8;
+}
+
+.card2--highlight .card2__content {
+    padding-inline: 1rem;
 }
 
 .card2__img {
@@ -429,7 +465,7 @@ button {
     font-size: var(--text-0);
 }
 
-.card2__description-container {
+.card2__rating-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -537,6 +573,10 @@ button {
     path {
         fill: var(--blue-0);
     }
+}
+
+.bg-gray-0 {
+    background-color: var(--gray-0);
 }
 
 @media (width < 1024px) {
