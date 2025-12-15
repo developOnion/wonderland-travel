@@ -56,6 +56,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (width < 640px) {
+        height: 350px;
+    }
 }
 
 .hero > * {
