@@ -350,12 +350,15 @@ button {
 
 .equal-column {
     --num-columns: 1;
+    --row-gap: 2em;
     display: grid;
     grid-template-columns: repeat(var(--num-columns), 1fr);
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: var(--row-gap);
 
     @media (width > 640px) {
         --num-columns: 2;
+        --row-gap: 1rem;
     }
 }
 
