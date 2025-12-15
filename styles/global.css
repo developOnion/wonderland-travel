@@ -319,6 +319,16 @@ button {
     } */
 }
 
+.equal-column {
+    --num-columns: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), 1fr);
+
+    @media (width > 640px) {
+        --num-columns: 2;
+    }
+}
+
 .media-scroller {
     overflow-x: auto;
     overscroll-behavior-inline: contain;

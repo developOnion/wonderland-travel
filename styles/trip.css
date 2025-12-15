@@ -37,7 +37,8 @@
     --border-3: 32px;
 }
 
-.trip-hero-section {
+.trip-hero-section,
+.trip-deal-section {
     display: flex;
     justify-content: center;
 }
