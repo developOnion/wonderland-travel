@@ -678,7 +678,7 @@ button {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: white;
+    background: var(--white);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 1.2rem;
@@ -686,7 +686,7 @@ button {
 }
 
 .carousel-btn:hover {
-    background: #eee;
+    background: var(--gray-1);
 }
 
 .carousel-btn.hidden {
@@ -694,11 +694,19 @@ button {
 }
 
 .carousel-btn--prev {
-    left: -20px;
+    left: -12px;
+
+    @media (width < 640px) {
+        left: -6px;
+    }
 }
 
 .carousel-btn--next {
-    right: -20px;
+    right: -12px;
+
+    @media (width < 640px) {
+        right: -6px;
+    }
 }
 
 .split-section {
