@@ -310,13 +310,10 @@ button {
     grid-auto-columns: minmax(200px, 300px);
     gap: 1rem;
 
-    /* @media (width > 640px) {
-        --columns: 2;
-    }
 
     @media (width > 1024px) {
-        --columns: 4;
-    } */
+        grid-auto-columns: 300px;
+    }
 }
 
 .media-scroller {
