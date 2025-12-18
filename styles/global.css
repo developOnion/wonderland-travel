@@ -82,11 +82,14 @@ button {
     width: 100%;
     max-width: 1280px;
     padding-inline: 1rem;
+
+    @media (width < 640px) {
+        padding-inline: 0.5rem;
+    }
 }
 
 .wrapper--wide {
     max-width: 1360px;
-    padding-inline: 0;
 }
 
 .header {
@@ -173,12 +176,12 @@ button {
 
 .secondary-btn {
     background-color: var(--white);
-    color: var(--blue-9);
+    color: var(--blue-5);
     border: none;
     padding-block: 0.8rem;
     padding-inline: 2rem;
     border-radius: var(--border-3);
-    border: 1px solid var(--blue-9);
+    border: 2px solid var(--blue-5);
     width: fit-content;
 
     a {
@@ -413,10 +416,10 @@ button {
 
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 25%,
-        rgba(0, 0, 0, 0.2) 25%,
-        rgba(0, 0, 0, 0) 28%,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 25%,
+        rgba(0, 0, 0, 0.4) 25%,
+        rgba(0, 0, 0, 0) 30%,
         rgba(0, 0, 0, 0) 100%
     );
     z-index: 10;
@@ -438,6 +441,21 @@ button {
     aspect-ratio: 1 / 1;
 }
 
+.card1--fill-title .card1__content {
+    background-color: var(--white);
+    border: 1px solid var(--gray-5);
+    border-top: none;
+
+    @media (width < 640px) {
+        padding-block: 0.25rem;
+        padding-inline: 0.5rem;
+    }
+}
+
+.card1--fill-title .card1__title {
+    color: var(--black);
+}
+
 .card1__img {
     border-radius: var(--border-1);
     width: 100%;
@@ -445,13 +463,31 @@ button {
     object-fit: cover;
 }
 
+.card1__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    z-index: 20;
+}
+
 .card1__title {
     font-size: var(--text-4);
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    z-index: 10;
     color: var(--white);
+
+    @media (width < 1024px) {
+        font-size: var(--text-3);
+    }
+}
+
+.card1__title--small {
+    font-size: var(--text-3);
+
+    @media (width < 640px) {
+        font-size: var(--text-2);
+    }
 }
 
 .card2,
@@ -561,6 +597,14 @@ button {
     padding: 1rem;
     border: 1px solid var(--gray-5);
     gap: 0.5rem;
+}
+
+.card4__headline {
+    font-size: var(--text-2);
+
+    @media (width < 640px) {
+        font-size: var(--text-1);
+    }
 }
 
 .card4__content {
