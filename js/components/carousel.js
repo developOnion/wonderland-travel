@@ -1,6 +1,6 @@
-const carousel = document.querySelector(".carousel-list");
-const prevBtn = document.querySelector(".carousel-btn--prev");
-const nextBtn = document.querySelector(".carousel-btn--next");
+const carousels = document.querySelectorAll(".carousel");
+const prevBtns = document.querySelectorAll(".carousel-btn--prev");
+const nextBtns = document.querySelectorAll(".carousel-btn--next");
 const wrapper = document.querySelector(".carousel-wrapper");
 
 const largeScreen = window.matchMedia("(width > 1024px)");
@@ -10,14 +10,14 @@ const smallScreen = window.matchMedia("(width <= 640px)");
 let currentIndex = 0;
 let cardWidth; // card width + gap
 
-function updateButtons() {
+function updateButtons(index) {
     cardWidth = setCardWidth();
 
-    const maxScroll = carousel.scrollWidth - wrapper.clientWidth;
+    const maxScroll = carousels[0].scrollWidth - wrapper.clientWidth;
     const currentScroll = currentIndex * cardWidth;
 
-    prevBtn.classList.toggle("hidden", currentIndex === 0);
-    nextBtn.classList.toggle("hidden", currentScroll >= maxScroll);
+    prevBtns[index].classList.toggle("hidden", currentIndex === 0);
+    nextBtns[index].classList.toggle("hidden", currentScroll >= maxScroll);
 }
 
 function setCardWidth() {
@@ -34,22 +34,34 @@ function setCardWidth() {
     return currCardWidth;
 }
 
-function slide(direction) {
-    console.log("clicked");
-
+function slide(direction, index) {
     const maxIndex = Math.ceil(
-        (carousel.scrollWidth - wrapper.clientWidth) / cardWidth
+        (carousels[index].scrollWidth - wrapper.clientWidth) / cardWidth
     );
 
     currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
-    carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    updateButtons();
+    carousels[index].style.transform = `translateX(-${
+        currentIndex * cardWidth
+    }px)`;
+    updateButtons(index);
 }
 
 export function initCarousel() {
-    prevBtn.addEventListener("click", () => slide(-1));
-    nextBtn.addEventListener("click", () => slide(1));
+    prevBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => slide(-1, index));
+    });
 
-    window.addEventListener("resize", updateButtons);
-    updateButtons();
+    nextBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => slide(1, index));
+    });
+
+    window.addEventListener("resize", () => {
+        carousels.forEach((_, index) => {
+            updateButtons(index);
+        });
+    });
+
+    carousels.forEach((_, index) => {
+        updateButtons(index);
+    });
 }
