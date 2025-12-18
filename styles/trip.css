@@ -37,18 +37,18 @@
     --border-3: 32px;
 }
 
-.hero-section,
-.top-accommodation-section,
-.top-hotel-section,
-.top-resort-section {
+.trip-hero-section,
+.trip-deal-section,
+.popular-trip-section,
+.trip-by-length-section {
     display: flex;
     justify-content: center;
 }
 
-.hero {
+.trip-hero {
     width: 100%;
     height: 400px;
-    background-image: url("../assets/images/hotel-1.jpg");
+    background-image: url("../assets/images/beach-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,11 +62,25 @@
     }
 }
 
-.hero > * {
+.trip-hero > * {
     z-index: 20;
 }
 
-.hero__title {
+.trip-deal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.trip-deal__headline {
+    font-size: var(--text-3);
+
+    @media (width < 640px) {
+        font-size: var(--text-2);
+    }
+}
+
+.trip-hero__headline {
     font-size: var(--text-7);
     color: var(--white);
 
