@@ -7,18 +7,8 @@ const largeScreen = window.matchMedia("(width > 1024px)");
 const mediumScreen = window.matchMedia("(width <= 1024px)");
 const smallScreen = window.matchMedia("(width <= 640px)");
 
-let currentIndex = 0;
+let currentIndexes = [];
 let cardWidth; // card width + gap
-
-function updateButtons(index) {
-    cardWidth = setCardWidth();
-
-    const maxScroll = carousels[0].scrollWidth - wrapper.clientWidth;
-    const currentScroll = currentIndex * cardWidth;
-
-    prevBtns[index].classList.toggle("hidden", currentIndex === 0);
-    nextBtns[index].classList.toggle("hidden", currentScroll >= maxScroll);
-}
 
 function setCardWidth() {
     let currCardWidth;
@@ -34,19 +24,34 @@ function setCardWidth() {
     return currCardWidth;
 }
 
+function updateButtons(index) {
+    cardWidth = setCardWidth();
+
+    const maxScroll = carousels[index].scrollWidth - wrapper.clientWidth;
+    const currentScroll = currentIndexes[index] * cardWidth;
+
+    prevBtns[index].classList.toggle("hidden", currentIndexes[index] === 0);
+    nextBtns[index].classList.toggle("hidden", currentScroll >= maxScroll);
+}
+
 function slide(direction, index) {
     const maxIndex = Math.ceil(
         (carousels[index].scrollWidth - wrapper.clientWidth) / cardWidth
     );
 
-    currentIndex = Math.max(0, Math.min(currentIndex + direction, maxIndex));
+    currentIndexes[index] = Math.max(
+        0,
+        Math.min(currentIndexes[index] + direction, maxIndex)
+    );
     carousels[index].style.transform = `translateX(-${
-        currentIndex * cardWidth
+        currentIndexes[index] * cardWidth
     }px)`;
     updateButtons(index);
 }
 
 export function initCarousel() {
+    currentIndexes = Array(carousels.length).fill(0);
+
     prevBtns.forEach((btn, index) => {
         btn.addEventListener("click", () => slide(-1, index));
     });
