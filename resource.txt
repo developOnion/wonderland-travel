@@ -9,3 +9,13 @@ font family: Oswald (heading), Inter (body)
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 
 font scale: major third
+
+<button
+    class="carousel-btn carousel-btn--prev hidden"
+    >
+    &#8249;
+</button>
+
+<button class="carousel-btn carousel-btn--next">
+    &#8250;
+</button>
