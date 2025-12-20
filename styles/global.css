@@ -413,9 +413,9 @@ button {
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.5) 25%,
-        rgba(0, 0, 0, 0.4) 25%,
-        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0.5) 20%,
+        rgba(0, 0, 0, 0.4) 20%,
+        rgba(0, 0, 0, 0) 25%,
         rgba(0, 0, 0, 0) 100%
     );
     z-index: 10;
@@ -568,7 +568,7 @@ button {
 }
 
 .card3__title,
-.card3__visited {
+.card3__review {
     color: var(--white);
 }
 
@@ -576,7 +576,7 @@ button {
     font-size: var(--text-1);
 }
 
-.card3__visited {
+.card3__review {
     font-size: var(--text-0);
 }
 
