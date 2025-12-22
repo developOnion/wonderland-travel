@@ -780,6 +780,15 @@ button {
     background-color: var(--gray-0);
 }
 
+/* Auth buttons as links */
+a.acc__sign-in,
+a.acc__sign-up {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (width < 1024px) {
     .header__hamburger-menu {
         display: block;
