@@ -1,9 +1,9 @@
 import { initNavbar } from "../components/navbar.js";
 import { initCarousel } from "../components/carousel.js";
 
-function initialize() {
+function initThingToDo() {
     initNavbar();
     initCarousel();
 }
 
-document.addEventListener("DOMContentLoaded", initialize);
+document.addEventListener("DOMContentLoaded", initThingToDo);
