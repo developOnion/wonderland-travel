@@ -495,12 +495,15 @@ button {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .card2__content {
-    gap: 0.5rem;
     padding-block-start: 0.5rem;
     padding-block-end: 1rem;
+}
+.card2__title{
+    flex-grow: 1;
 }
 
 .card2__price {
@@ -674,7 +677,6 @@ button {
         grid-auto-columns: 200px;
     }
 }
-
 .carousel-btn {
     position: absolute;
     top: 50%;
