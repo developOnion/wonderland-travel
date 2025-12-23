@@ -435,6 +435,13 @@ button {
     );
 }
 
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+    opacity: 0.8;
+}
+
 .card1 {
     position: relative;
     aspect-ratio: 1 / 1;
@@ -502,7 +509,7 @@ button {
     padding-block-start: 0.5rem;
     padding-block-end: 1rem;
 }
-.card2__title{
+.card2__title {
     flex-grow: 1;
 }
 
