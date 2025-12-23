@@ -6,14 +6,14 @@ const signUpForm = document.getElementById("sign-up-form");
 function initAuth() {
     initNavbar();
 
-    signInForm.addEventListener("submit", (e) => {
+    signInForm?.addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(signInForm);
         const data = Object.fromEntries(formData);
         console.log("Sign In:", data);
     });
 
-    signUpForm.addEventListener("submit", (e) => {
+    signUpForm?.addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(signUpForm);
         const data = Object.fromEntries(formData);

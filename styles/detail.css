@@ -115,7 +115,6 @@
     height: 16px;
 }
 
-/* Picture Gallery - TripAdvisor Style */
 .detail-section__picture-container {
     width: 100%;
     display: grid;
@@ -502,7 +501,6 @@
     font-weight: 600;
 }
 
-/* Highlights Grid */
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -528,7 +526,6 @@
     color: var(--gray-7);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .detail-section__content-container {
         grid-template-columns: 1fr;
@@ -605,9 +602,14 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width < 640px) {
     .detail-section__picture-container {
-        grid-template-rows: 200px 100px 100px;
+        grid-template-rows: 400px;
+    }
+
+    .detail-section__picture-container img:nth-child(2),
+    img:nth-child(3) {
+        display: none;
     }
 
     .quick-info {
