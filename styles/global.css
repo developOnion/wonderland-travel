@@ -582,15 +582,21 @@ button {
 }
 
 .card3__title,
-.card3__review {
+.card3__review,
+.card3__price {
     color: var(--white);
+}
+.card3__price-num{
+    font-size: var(--text-1);
+    font-weight: bold;
 }
 
 .card3__title {
     font-size: var(--text-1);
 }
 
-.card3__review {
+.card3__review,
+.card3__price {
     font-size: var(--text-0);
 }
 

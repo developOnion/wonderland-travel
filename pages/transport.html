@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Transportation</title>
+
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/transport.css" />
+        <script type="module" src="../js/pages/transport.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper nav-container">
+                <div class="nav__left-container">
+                    <button class="header__hamburger-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="1.5"
+                                d="M20 7H4m16 5H4m16 5H4"
+                            />
+                        </svg>
+                    </button>
+
+                    <h1 class="logo">Wonderland</h1>
+                </div>
+
+                <nav class="nav">
+                    <button class="nav__close-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10M8.97 8.97a.75.75 0 0 1 1.06 0L12 10.94l1.97-1.97a.75.75 0 0 1 1.06 1.06L13.06 12l1.97 1.97a.75.75 0 0 1-1.06 1.06L12 13.06l-1.97 1.97a.75.75 0 0 1-1.06-1.06L10.94 12l-1.97-1.97a.75.75 0 0 1 0-1.06"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </button>
+
+                    <ul role="list" class="nav__list">
+                        <li class="nav__item">
+                            <a
+                                href="../index.html"
+                                class="nav__link"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="../pages/thing-to-do.html" class="nav__link"
+                                >Things to Do</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a
+                                href="../pages/accommodation.html"
+                                class="nav__link"
+                                >Accommodation</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="../pages/transport.html" class="nav__link nav__link--active">
+                                Transportation
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../pages/trip.html" class="nav__link"
+                                >Tour Pakage</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="../pages/about-us.html" class="nav__link"
+                                >About Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="acc">
+                    <a href="./sign-in.html" class="acc__sign-in">Sign in</a>
+                    <a href="./sign-up.html" class="acc__sign-up">Sign up</a>
+                </div>
+            </div>
+        </header>
+        <main class="pb-96">
+            <section class="boat-section py-48">
+                <div class="wrapper card-section">
+                    <div class="card-section__title-container">
+                        <h2 class="card-section__title">
+                            Boat
+                        </h2>
+                        <p class="card-section__paragraph">
+                            Take a ride while enjoying the ocean view
+                        </p>
+                    </div>
+
+                    <div class="carousel-container">
+                        <button class="carousel-btn carousel-btn--prev hidden">
+                            &#8249;
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <ul class="carousel" role="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    alt="Yacht"
+                                                    src="../assets/images/yacht.webp"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Yacht
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/speedboat.webp"
+                                                    alt="speedboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Speed Boat
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/motorboat.webp"
+                                                    alt="motorboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Motor Boat
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/sailboat.webp"
+                                                    alt="sailboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Sail Boat
+                                                </h3>
+
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="carousel-btn carousel-btn--next">
+                            &#8250;
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="plane-section py-48">
+                <div class="wrapper card-section">
+                    <div class="card-section__title-container">
+                        <h2 class="card-section__title">
+                            Plane
+                        </h2>
+                        <p class="card-section__paragraph">
+                            Swiftly go to the destination
+                        </p>
+                    </div>
+
+                    <div class="carousel-container">
+                        <button class="carousel-btn carousel-btn--prev hidden">
+                            &#8249;
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <ul class="carousel" role="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    alt="Yacht"
+                                                    src="../assets/images/yacht.webp"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Yacht
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/speedboat.webp"
+                                                    alt="speedboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Speed Boat
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/motorboat.webp"
+                                                    alt="motorboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Motor Boat
+                                                </h3>
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="card3">
+                                            <div
+                                                class="card3__img-wrapper overlay-gray"
+                                            >
+                                                <img
+                                                    src="../assets/images/sailboat.webp"
+                                                    alt="sailboat"
+                                                    class="card3__img"
+                                                />
+                                            </div>
+                                            <div
+                                                class="card3__description-container"
+                                            >
+                                                <h3 class="card3__title">
+                                                    Sail Boat
+                                                </h3>
+
+                                                <p class="card3__price">from: <span class="card3__price-num">$10</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="carousel-btn carousel-btn--next">
+                            &#8250;
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-container">
+            <div class="wrapper footer">
+                <div class="footer__logo">
+                    <h2 class="logo">Wonderland</h2>
+                    <p class="footer__copyright">
+                        © 2025 Wonderland LLC All rights reserved.
+                    </p>
+                </div>
+
+                <div class="footer__section-container">
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">Contact</h3>
+                        <a href="#" class="footer__item">Customer support</a>
+                        <a href="#" class="footer__item">Facebook</a>
+                        <a href="#" class="footer__item">Tiktok</a>
+                        <a href="#" class="footer__item">Instagram</a>
+                    </div>
+
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">About Us</h3>
+                        <a href="#" class="footer__item">About us</a>
+                        <a href="#" class="footer__item">Event</a>
+                        <a href="#" class="footer__item">Our policy</a>
+                        <a href="#" class="footer__item">Term of conditions</a>
+                    </div>
+
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">Services</h3>
+                        <a href="#" class="footer__item">Accommodations</a>
+                        <a href="#" class="footer__item">Transportation</a>
+                        <a href="#" class="footer__item">Tour guide</a>
+                        <a href="#" class="footer__item">Entertainment</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
