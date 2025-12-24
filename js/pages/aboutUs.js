@@ -1,7 +1,7 @@
-import { initNav } from "../components/navbar.js";
+import { initNavbar } from "../components/navbar.js";
 
 function initAboutUsPage() {
-    initNav();
+    initNavbar();
 }
 
 document.addEventListener("DOMContentLoaded", initAboutUsPage);

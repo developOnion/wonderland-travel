@@ -105,7 +105,6 @@ function addTravelerFields() {
     const addButton = sectionContent.querySelector('.add-traveler-btn');
     sectionContent.insertBefore(newTravelerCard, addButton);
 
-    // Add event listener to remove button
     const removeBtn = newTravelerCard.querySelector('.remove-traveler-btn');
     removeBtn.addEventListener('click', function() {
         newTravelerCard.remove();
@@ -113,7 +112,6 @@ function addTravelerFields() {
         updateTravelerNumbers();
     });
 
-    // Update price summary
     updatePriceSummary();
 }
 
@@ -141,7 +139,7 @@ function updatePriceSummary() {
     const discount = DISCOUNT_PER_PERSON * travelerCount;
     const total = adultsSubtotal + SERVICE_FEE - discount;
 
-    const priceRows = document.getElementsByClassName('.price-row');
+    const priceRows = document.getElementsByClassName('price-row');
     if (priceRows.length >= 4) {
         priceRows[0].children[0].textContent = `Adult x ${travelerCount}`;
         priceRows[0].children[1].textContent = `$${adultsSubtotal.toFixed(2)}`;
