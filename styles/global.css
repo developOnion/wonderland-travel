@@ -508,6 +508,7 @@ button {
 .card2__content {
     padding-block-start: 0.5rem;
     padding-block-end: 1rem;
+    gap: 0.5rem;
 }
 .card2__title {
     flex-grow: 1;
@@ -819,8 +820,7 @@ a.acc__sign-up {
         align-items: flex-start;
         justify-content: flex-start;
         padding-block-start: 1rem;
-        padding-inline-start: 1rem;
-        padding-inline-end: 3rem;
+        padding-inline: 1rem;
         background-color: var(--gray-1);
     }
 
