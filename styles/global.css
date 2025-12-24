@@ -583,15 +583,21 @@ button {
 }
 
 .card3__title,
-.card3__review {
+.card3__review,
+.card3__price {
     color: var(--white);
+}
+.card3__price-num{
+    font-size: var(--text-1);
+    font-weight: bold;
 }
 
 .card3__title {
     font-size: var(--text-1);
 }
 
-.card3__review {
+.card3__review,
+.card3__price {
     font-size: var(--text-0);
 }
 
@@ -814,13 +820,14 @@ a.acc__sign-up {
         left: 0;
         z-index: 100;
         height: 100%;
-        width: 40%;
+        width: 190px;
         flex-direction: column;
         gap: 1rem;
         align-items: flex-start;
         justify-content: flex-start;
         padding-block-start: 1rem;
-        padding-inline: 1rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
         background-color: var(--gray-1);
     }
 
