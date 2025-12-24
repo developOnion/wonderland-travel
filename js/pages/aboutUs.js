@@ -1,4 +1,4 @@
-import { initNav } from "../components/nav.js";
+import { initNav } from "../components/navbar.js";
 
 function initAboutUsPage() {
     initNav();
