@@ -1,4 +1,44 @@
-/* Checkout Page Styles */
+:root {
+    /* typography */
+    --ff-heading: "Oswald", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --text-7: 3.815rem;
+    --text-6: 3.052rem;
+    --text-5: 2.441rem;
+    --text-4: 1.953rem;
+    --text-3: 1.563rem;
+    --text-2: 1.25rem;
+    --text-1: 1rem;
+    --text-0: 0.8rem;
+
+    /* color palette */
+    --blue-0: #e7f5ff;
+    --blue-1: #d0ebff;
+    --blue-3: #74c0fc;
+    --blue-5: #339af0;
+    --blue-7: #1c7ed6;
+    --blue-9: #1864ab;
+
+    --gray-0: #f8f9fa;
+    --gray-1: #f1f3f5;
+    --gray-3: #dee2e6;
+    --gray-5: #adb5bd;
+    --gray-7: #495057;
+    --gray-9: #212529;
+
+    --green-5: #22c55e;
+    --yellow-5: #f59e0b;
+
+    --white: #fff;
+    --black: #000;
+
+    /* border radius */
+    --border-0: 4px;
+    --border-1: 8px;
+    --border-2: 16px;
+    --border-3: 32px;
+}
 
 .checkout-main {
     display: flex;
@@ -12,7 +52,6 @@
     margin-bottom: 1.5rem;
 }
 
-
 .checkout-container {
     display: grid;
     grid-template-columns: 1fr 380px;
@@ -23,10 +62,9 @@
 .checkout-title {
     font-size: var(--text-4);
     margin-bottom: 1.5rem;
-    color: var(--blue-9);
+    color: var(--black);
 }
 
-/* Form Sections */
 .form-section {
     background: var(--white);
     border-radius: var(--border-1);
@@ -59,7 +97,7 @@
 
 .section-header h2 {
     font-size: var(--text-2);
-    color: var(--blue-9);
+    color: var(--black);
     font-family: var(--ff-heading);
 }
 
@@ -73,7 +111,6 @@
     font-size: var(--text-0);
 }
 
-/* Form Elements */
 .form-row {
     margin-bottom: 1.25rem;
 }
@@ -131,7 +168,16 @@
     flex-shrink: 0;
 }
 
-/* Traveler Card */
+#country-code {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23495057' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 2rem;
+}
+
 .traveler-card {
     background: var(--gray-0);
     padding: 1.25rem;
@@ -142,7 +188,7 @@
 .traveler-card h3 {
     font-size: var(--text-1);
     margin-bottom: 1rem;
-    color: var(--blue-7);
+    color: var(--black);
     font-family: var(--ff-heading);
 }
 
@@ -211,7 +257,6 @@
     fill: var(--blue-5);
 }
 
-/* Billing Address */
 .billing-address {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -225,7 +270,6 @@
     font-family: var(--ff-heading);
 }
 
-/* Checkout Footer */
 .checkout-footer {
     background: var(--white);
     padding: 1.5rem;
@@ -235,7 +279,7 @@
 
 .terms-checkbox {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
     margin-bottom: 1.25rem;
     cursor: pointer;
@@ -273,7 +317,6 @@
     fill: var(--white);
 }
 
-/* Booking Summary */
 .booking-summary {
     position: sticky;
     top: 1rem;
@@ -368,7 +411,6 @@
     color: var(--gray-9);
 }
 
-/* Cancellation Policy */
 .cancellation-policy {
     padding: 1.25rem;
     border-top: 1px solid var(--gray-3);
@@ -393,7 +435,6 @@
     color: var(--gray-7);
 }
 
-/* Trust Badges */
 .trust-badges {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -402,6 +443,10 @@
 }
 
 .badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     background: var(--white);
     padding: 1rem 0.5rem;
     border-radius: var(--border-0);
@@ -412,7 +457,6 @@
 .badge svg {
     fill: var(--blue-5);
     display: block;
-    margin: 0 auto 0.5rem;
 }
 
 .badge span {
@@ -421,7 +465,6 @@
     font-weight: 500;
 }
 
-/* Responsive Design */
 @media (width < 1024px) {
     .checkout-container {
         grid-template-columns: 1fr;
@@ -431,6 +474,22 @@
         position: static;
         order: -1;
     }
+}
+
+.remove-traveler-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    background-color: var(--blue-5);
+    color: var(--white);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: var(--border-0);
+}
+
+.remove-traveler-btn:hover {
+    background-color: var(--blue-3);
 }
 
 @media (width < 640px) {
