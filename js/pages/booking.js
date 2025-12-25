@@ -130,7 +130,7 @@ function updateTravelerNumbers() {
 }
 
 function updatePriceSummary() {
-    const PRICE_PER_ADULT = 99;
+    const PRICE_PER_ADULT = 73;
     const SERVICE_FEE = 15;
     const DISCOUNT_PER_PERSON = 10;
 
