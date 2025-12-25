@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout - Complete Your Booking | Wonderland</title>
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/booking.css" />
+        <script src="../js/pages/booking.js" type="module" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper nav-container">
+                <div class="nav__left-container">
+                    <button class="header__hamburger-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="1.5"
+                                d="M20 7H4m16 5H4m16 5H4"
+                            />
+                        </svg>
+                    </button>
+                    <h1 class="logo">Wonderland</h1>
+                </div>
+
+                <nav class="nav">
+                    <button class="nav__close-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10M8.97 8.97a.75.75 0 0 1 1.06 0L12 10.94l1.97-1.97a.75.75 0 0 1 1.06 1.06L13.06 12l1.97 1.97a.75.75 0 0 1-1.06 1.06L12 13.06l-1.97 1.97a.75.75 0 0 1-1.06-1.06L10.94 12l-1.97-1.97a.75.75 0 0 1 0-1.06"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </button>
+
+                    <ul role="list" class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./thing-to-do.html" class="nav__link"
+                                >Things to Do</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="./accommodation.html" class="nav__link"
+                                >Accommodation</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="./transport.html" class="nav__link"
+                                >Transportation</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="./trip.html" class="nav__link"
+                                >Tour Package</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="./about-us.html" class="nav__link"
+                                >About Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="acc">
+                    <a href="./sign-in.html" class="acc__sign-in">Sign in</a>
+                    <a href="./sign-up.html" class="acc__sign-up">Sign up</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="checkout-main">
+            <div class="wrapper">
+                <div class="checkout-container">
+                    <form
+                        class="checkout-form"
+                        id="booking-form"
+                        method="POST"
+                        action="#"
+                        novalidate
+                    >
+                        <h1 class="checkout-title">Complete Your Booking</h1>
+
+                        <section class="form-section" id="contact">
+                            <div class="section-header">
+                                <span class="section-number">1</span>
+                                <h2>Contact Details</h2>
+                            </div>
+                            <div class="section-content">
+                                <p class="section-description">
+                                    We'll use this information to send you
+                                    confirmation and updates about your booking.
+                                </p>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email"
+                                            >Email Address
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            placeholder="email@example.com"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number </label>
+                                        <div class="phone-input">
+                                            <select
+                                                id="country-code"
+                                                name="country-code"
+                                            >
+                                                <option value="+1">
+                                                    +1 (US)
+                                                </option>
+                                                <option value="+44">
+                                                    +44 (UK)
+                                                </option>
+                                                <option value="+62">
+                                                    +62 (ID)
+                                                </option>
+                                                <option value="+61">
+                                                    +61 (AU)
+                                                </option>
+                                                <option value="+65">
+                                                    +65 (SG)
+                                                </option>
+                                                <option value="+855" selected>
+                                                    +855 (KH)
+                                                </option>
+                                            </select>
+                                            <input
+                                                type="tel"
+                                                id="phone"
+                                                name="phone"
+                                                required
+                                                placeholder="Phone number"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="form-section" id="travelers">
+                            <div class="section-header">
+                                <span class="section-number">2</span>
+                                <h2>Traveler Details</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="traveler-card">
+                                    <h3>Lead Traveler (Adult)</h3>
+                                    <div class="form-row two-columns">
+                                        <div class="form-group">
+                                            <label for="first-name"
+                                                >First Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="first-name"
+                                                name="first-name"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name"
+                                                >Last Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="last-name"
+                                                name="last-name"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="dob"
+                                                >Date of Birth</label
+                                            >
+                                            <input
+                                                type="date"
+                                                id="dob"
+                                                name="dob"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="add-traveler-btn">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"
+                                        />
+                                    </svg>
+                                    Add Another Traveler
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="form-section" id="requirements">
+                            <div class="section-header">
+                                <span class="section-number">3</span>
+                                <h2>Special Requirements</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="form-group">
+                                    <label for="special-requests"
+                                        >Special Requests (Optional)</label
+                                    >
+                                    <textarea
+                                        id="special-requests"
+                                        name="special-requests"
+                                        rows="4"
+                                        placeholder="Any dietary requirements, accessibility needs, or other requests..."
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="form-section" id="payment">
+                            <div class="section-header">
+                                <span class="section-number">4</span>
+                                <h2>Payment Details</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="payment-methods">
+                                    <label class="payment-option">
+                                        <input
+                                            type="radio"
+                                            name="payment-method"
+                                            value="card"
+                                            checked
+                                        />
+                                        <span class="payment-label">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4v-6h16zm0-10H4V6h16z"
+                                                />
+                                            </svg>
+                                            Credit/Debit Card
+                                        </span>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input
+                                            type="radio"
+                                            name="payment-method"
+                                            value="paypal"
+                                        />
+                                        <span class="payment-label">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    fill="currentColor"
+                                                    d="M9.93 12.99h2.06c2.44 0 3.74-1.68 4.04-3.58c.35-2.18-.75-4.41-3.94-4.41H7.41c-.35 0-.6.24-.66.58l-1.69 10c-.06.35.18.65.53.65h2.12l-.31 1.87c-.05.3.15.54.45.54h2.06c.3 0 .55-.2.6-.5l.7-4.18c.02-.14.15-.24.3-.24l.42.02z"
+                                                />
+                                            </svg>
+                                            PayPal
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="card-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-name"
+                                                >Name on Card</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="card-name"
+                                                name="card-name"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-number"
+                                                >Card Number</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="card-number"
+                                                name="card-number"
+                                                required
+                                                placeholder="1234 5678 9012 3456"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-row two-columns">
+                                        <div class="form-group">
+                                            <label for="expiry"
+                                                >Expiry Date
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="expiry"
+                                                name="expiry"
+                                                required
+                                                placeholder="MM/YY"
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV </label>
+                                            <input
+                                                type="text"
+                                                id="cvv"
+                                                name="cvv"
+                                                required
+                                                placeholder="123"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="billing-address">
+                                    <h3>Billing Address</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="country"
+                                                >Country
+                                            </label>
+                                            <select
+                                                id="country"
+                                                name="country"
+                                                required
+                                            >
+                                                <option value="">
+                                                    Select Country
+                                                </option>
+                                                <option value="KH">
+                                                    Cambodia
+                                                </option>
+                                                <option value="ID">
+                                                    Indonesia
+                                                </option>
+                                                <option value="US">
+                                                    United States
+                                                </option>
+                                                <option value="UK">
+                                                    United Kingdom
+                                                </option>
+                                                <option value="AU">
+                                                    Australia
+                                                </option>
+                                                <option value="SG">
+                                                    Singapore
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address"
+                                                >Street Address
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="address"
+                                                name="address"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-row two-columns">
+                                        <div class="form-group">
+                                            <label for="city">City </label>
+                                            <input
+                                                type="text"
+                                                id="city"
+                                                name="city"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip"
+                                                >ZIP/Postal Code
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="zip"
+                                                name="zip"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="checkout-footer">
+                            <label class="terms-checkbox">
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    name="terms"
+                                    required
+                                />
+                                <span
+                                    >I agree to the
+                                    <a href="#">Terms of Service</a> and
+                                    <a href="#">Privacy Policy</a></span
+                                >
+                            </label>
+
+                            <button
+                                type="submit"
+                                class="submit-btn primary-btn"
+                            >
+                                Complete Booking
+                            </button>
+                        </div>
+                    </form>
+
+                    <aside class="booking-summary">
+                        <div class="summary-card">
+                            <div class="summary-image">
+                                <img
+                                    src="../assets/images/nusa-penida.webp"
+                                    alt="Tour Image"
+                                />
+                            </div>
+                            <div class="summary-details">
+                                <h3>Nusa Penida Island Day Trip</h3>
+                                <div class="rating">
+                                    <div class="star-list">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            class="star"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            class="star"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            class="star"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            class="star"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            class="star"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span>5.0 (30,400 reviews)</span>
+                                </div>
+                                <div class="tour-info">
+                                    <p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 16H5V10h14zM9 14H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2zm-8 4H7v-2h2zm4 0h-2v-2h2zm4 0h-2v-2h2z"
+                                            />
+                                        </svg>
+                                        Saturday, Jan 15, 2025
+                                    </p>
+                                    <p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8s-3.58 8-8 8m.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67z"
+                                            />
+                                        </svg>
+                                        6:00 AM - 6:00 PM
+                                    </p>
+                                    <p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05c1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5"
+                                            />
+                                        </svg>
+                                        1 Adult
+                                    </p>
+                                    <p>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"
+                                            />
+                                        </svg>
+                                        Sanur Harbor, Bali
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="price-breakdown">
+                                <h4>Price Details</h4>
+                                <div class="price-row">
+                                    <span>Adult x 1</span>
+                                    <span>$99.00</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Service Fee</span>
+                                    <span>$15.00</span>
+                                </div>
+                                <div class="price-row discount">
+                                    <span>Early Bird Discount</span>
+                                    <span>-$10.00</span>
+                                </div>
+                                <div class="price-row total">
+                                    <span>Total</span>
+                                    <span>$104.00</span>
+                                </div>
+                            </div>
+                            <div class="cancellation-policy">
+                                <h4>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11z"
+                                        />
+                                    </svg>
+                                    Free Cancellation
+                                </h4>
+                                <p>
+                                    Cancel up to 24 hours before the experience
+                                    for a full refund.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="trust-badges">
+                            <div class="badge">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M16.75 8v1.25h.58c.535 0 .98 0 1.345.03c.38.031.736.098 1.073.27a2.75 2.75 0 0 1 1.202 1.202c.172.337.24.694.27 1.074c.03.364.03.81.03 1.344v4.66c0 .535 0 .98-.03 1.345c-.03.38-.098.737-.27 1.074a2.75 2.75 0 0 1-1.201 1.202c-.338.172-.694.239-1.074.27c-.365.03-.81.03-1.344.03H6.67c-.535 0-.98 0-1.345-.03c-.38-.031-.736-.098-1.073-.27a2.75 2.75 0 0 1-1.202-1.202c-.172-.337-.24-.694-.27-1.074c-.03-.364-.03-.81-.03-1.344V13.17c0-.534 0-.98.03-1.344c.03-.38.098-.737.27-1.074A2.75 2.75 0 0 1 4.252 9.55c.337-.172.693-.239 1.073-.27c.365-.03.81-.03 1.345-.03h.58V8c0-1.478.33-2.901 1.107-3.975c.8-1.107 2.03-1.775 3.643-1.775s2.842.668 3.643 1.775C16.42 5.099 16.75 6.522 16.75 8m-8 0v1.25h6.5V8c0-1.283-.29-2.36-.822-3.096c-.51-.703-1.28-1.154-2.428-1.154s-1.919.45-2.428 1.154C9.04 5.64 8.75 6.717 8.75 8m8 6a.75.75 0 1 0-1.5 0v3a.75.75 0 0 0 1.5 0z"
+                                    />
+                                </svg>
+                                <span>Secure Payment</span>
+                            </div>
+                            <div class="badge">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M9.004 3.416C8.432 2.606 7.64 2.241 6.8 2.25c-.797.008-1.573.349-2.221.803A6.2 6.2 0 0 0 2.92 4.79c-.41.649-.706 1.416-.666 2.165c.193 3.603 2.22 7.453 5.067 10.302c2.845 2.846 6.644 4.824 10.48 4.446c.752-.074 1.463-.457 2.044-.945a5.8 5.8 0 0 0 1.443-1.84c.34-.692.543-1.49.431-2.267c-.116-.81-.569-1.534-1.402-2.014a16 16 0 0 1-.512-.31c-.15-.093-.31-.194-.504-.31a7.5 7.5 0 0 0-1.249-.618c-.447-.163-.958-.27-1.49-.197c-.551.076-1.063.336-1.506.802c-.341.36-.843.472-1.549.268c-.718-.208-1.526-.724-2.228-1.422c-.702-.696-1.233-1.51-1.46-2.245c-.224-.728-.125-1.263.225-1.632c.473-.498.725-1.052.778-1.638c.052-.57-.09-1.106-.293-1.574c-.304-.699-.82-1.394-1.224-1.936a22 22 0 0 1-.3-.41"
+                                    />
+                                </svg>
+                                <span>24/7 Support</span>
+                            </div>
+                            <div class="badge">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12m13.523-3.308a.75.75 0 0 0-1.048.169l-3.597 4.981a.25.25 0 0 1-.391.018l-1.506-1.72a.75.75 0 1 0-1.129.987l1.506 1.721a1.75 1.75 0 0 0 2.736-.128l3.597-4.98a.75.75 0 0 0-.168-1.048"
+                                    />
+                                </svg>
+                                <span>Best Price Guarantee</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer-container">
+            <div class="wrapper footer">
+                <div class="footer__logo">
+                    <h2 class="logo">Wonderland</h2>
+                    <p class="footer__copyright">
+                        © 2025 Wonderland LLC All rights reserved.
+                    </p>
+                </div>
+
+                <div class="footer__section-container">
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">Contact</h3>
+                        <a href="#" class="footer__item">Customer support</a>
+                        <a
+                            href="https://www.facebook.com/"
+                            class="footer__item"
+                            target="_blank"
+                            >Facebook</a
+                        >
+                        <a
+                            href="https://www.tiktok.com"
+                            class="footer__item"
+                            target="_blank"
+                            >Tiktok</a
+                        >
+                        <a
+                            href="https://www.instagram.com"
+                            class="footer__item"
+                            target="_blank"
+                            >Instagram</a
+                        >
+                    </div>
+
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">About Us</h3>
+                        <a href="./about-us.html" class="footer__item"
+                            >About us</a
+                        >
+                        <a href="#" class="footer__item">Event</a>
+                        <a href="#" class="footer__item">Our policy</a>
+                        <a href="#" class="footer__item">Term of conditions</a>
+                    </div>
+
+                    <div class="footer__section">
+                        <h3 class="footer__section-title">Services</h3>
+                        <a href="./accommodation.html" class="footer__item"
+                            >Accommodations</a
+                        >
+                        <a href="./transport.html" class="footer__item"
+                            >Transportation</a
+                        >
+                        <a href="./trip.html" class="footer__item"
+                            >Tour Package</a
+                        >
+                        <a href="./thing-to-do.html" class="footer__item"
+                            >Entertainment</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

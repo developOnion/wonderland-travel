@@ -443,7 +443,7 @@
 .booking-btn {
     background: var(--blue-5);
     color: white;
-    border: none;
+    text-align: center;
     border-radius: var(--border-1);
     padding: 16px 24px;
     font-size: var(--text-1);
