@@ -43,7 +43,6 @@
 .checkout-main {
     display: flex;
     justify-content: center;
-    padding-block: 2rem;
     background-color: var(--gray-0);
     min-height: calc(100vh - 200px);
 }
